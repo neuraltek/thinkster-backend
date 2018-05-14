@@ -33,7 +33,8 @@ if (!isProduction) {
 if(isProduction){
   mongoose.connect(process.env.MONGODB_URI);
 } else {
-  mongoose.connect('mongodb://localhost/conduit');
+//  mongoose.connect('mongodb://localhost/conduit');
+  mongoose.connect('mongodb://conduit:test1234@ds123490.mlab.com:23490/conduit-thinkster');
   mongoose.set('debug', true);
 }
 
